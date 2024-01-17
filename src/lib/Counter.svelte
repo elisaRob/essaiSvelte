@@ -1,5 +1,9 @@
 <script>
-  let count = 0
+
+  export let initialCount;
+  export let maxCount;
+
+  let count = initialCount
   let string;
   let string2;
 
@@ -10,6 +14,7 @@
    $ : string2 = `You have ${count} times`
 
   function increment(){
+    if(maxCount===count) return
     count+=1
   }
 </script>
